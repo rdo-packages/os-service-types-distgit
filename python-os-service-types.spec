@@ -36,12 +36,16 @@ Summary:        %{summary}
 
 BuildRequires:  python2-devel
 BuildRequires:  python2-pbr
-BuildRequires:  python-subunit
+BuildRequires:  python2-subunit
 BuildRequires:  python2-oslotest
-BuildRequires:  python-testscenarios
-BuildRequires:  python-requests-mock
+BuildRequires:  python2-testscenarios
 BuildRequires:  python2-keystoneauth1
 BuildRequires:  python2-setuptools
+%if 0%{?fedora} || 0%{?rhel} > 7
+BuildRequires:  python2-requests-mock
+%else
+BuildRequires:  python-requests-mock
+%endif
 
 Requires:       python2-pbr >= 2.0.0
 %description -n python2-%{pypi_name}
