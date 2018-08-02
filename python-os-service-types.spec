@@ -37,14 +37,17 @@ Summary:        %{summary}
 BuildRequires:  python2-devel
 BuildRequires:  python2-pbr
 BuildRequires:  python2-subunit
-BuildRequires:  python2-oslotest
 BuildRequires:  python2-testscenarios
-BuildRequires:  python2-keystoneauth1
 BuildRequires:  python2-setuptools
 %if 0%{?fedora} || 0%{?rhel} > 7
 BuildRequires:  python2-requests-mock
 %else
 BuildRequires:  python-requests-mock
+%endif
+
+%if 0%{?repo_bootstrap} == 0
+BuildRequires:  python2-keystoneauth1
+BuildRequires:  python2-oslotest
 %endif
 
 Requires:       python2-pbr >= 2.0.0
@@ -59,11 +62,13 @@ Summary:        %{summary}
 BuildRequires:  python3-devel
 BuildRequires:  python3-pbr
 BuildRequires:  python3-subunit
-BuildRequires:  python3-oslotest
 BuildRequires:  python3-testscenarios
 BuildRequires:  python3-requests-mock
-BuildRequires:  python3-keystoneauth1
 BuildRequires:  python3-setuptools
+%if 0%{?repo_bootstrap} == 0
+BuildRequires:  python3-keystoneauth1
+BuildRequires:  python3-oslotest
+%endif
 
 Requires:       python3-pbr >= 2.0.0
 %description -n python3-%{pypi_name}
@@ -106,11 +111,13 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 
 
 %check
+%if 0%{?repo_bootstrap} == 0
 %if 0%{?with_python3}
 %{__python3} setup.py test
 %endif
 
 %{__python2} setup.py test
+%endif
 
 %files -n python2-%{pypi_name}
 %license LICENSE
