@@ -16,8 +16,8 @@ version of the data to use in case network access is for some reason not possibl
 and local caching of the fetched data.
 
 Name:           python-%{pypi_name}
-Version:        XXX
-Release:        XXX
+Version:        1.2.0
+Release:        1%{?dist}
 Summary:        Python library for consuming OpenStack sevice-types-authority data
 
 License:        ASL 2.0
@@ -140,3 +140,6 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %doc doc/build/html
 
 %changelog
+* Tue Aug 07 2018 RDO <dev@lists.rdoproject.org> 1.2.0-1
+- Update to 1.2.0
+
