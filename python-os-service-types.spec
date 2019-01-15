@@ -2,7 +2,7 @@
 %global pypi_name os-service-types
 %global module_name os_service_types
 
-%if 0%{?fedora}
+%if 0%{?fedora} || 0%{?rhel} > 7
 %global with_python3 1
 %endif
 
@@ -14,6 +14,8 @@ The data is in JSON and the latest data should always be used. This simple \
 library exists to allow for easy consumption of the data, along with a built-in \
 version of the data to use in case network access is for some reason not possible \
 and local caching of the fetched data.
+
+%global with_doc 1
 
 Name:           python-%{pypi_name}
 Version:        XXX
@@ -75,6 +77,7 @@ Requires:       python3-pbr >= 2.0.0
 %{common_desc}
 %endif
 
+%if 0%{?with_doc}
 %package -n python-%{pypi_name}-doc
 Summary:        %{pypi_name} documentation
 
@@ -86,6 +89,7 @@ BuildRequires:  python2-sphinx
 
 
 Documentation for %{pypi_name}
+%endif
 
 %prep
 %autosetup -n %{pypi_name}-%{upstream_version} -S git
@@ -99,10 +103,13 @@ rm -rf %{pypi_name}.egg-info
 %py3_build
 %endif
 %py2_build
+
+%if 0%{?with_doc}
 # generate html docs
 %{__python2} setup.py build_sphinx -b html
 # remove the sphinx-build leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
+%endif
 
 %install
 %if 0%{?with_python3}
@@ -135,8 +142,10 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %{python3_sitelib}/%{module_name}-%{upstream_version}-py?.?.egg-info
 %endif
 
+%if 0%{?with_doc}
 %files -n python-%{pypi_name}-doc
 %license LICENSE
 %doc doc/build/html
+%endif
 
 %changelog
