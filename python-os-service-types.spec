@@ -6,9 +6,6 @@
 %global with_python3 1
 %endif
 
-# enable repo_bootstrap until we have keystoneauth1
-%global repo_bootstrap 1
-
 %global common_desc \
 OsServiceTypes is a Python library for consuming OpenStack sevice-types-authority data \
 The OpenStack Service Types Authority contains information about official \
@@ -22,7 +19,7 @@ and local caching of the fetched data.
 
 Name:           python-%{pypi_name}
 Version:        1.6.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Python library for consuming OpenStack sevice-types-authority data
 
 License:        ASL 2.0
@@ -152,6 +149,9 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+* Fri Mar 08 2019 Alfredo Morlejo <amoralej@redhat.com> 1.6.0-2
+- Disable bootstrap mode.
+
 * Fri Mar 08 2019 RDO <dev@lists.rdoproject.org> 1.6.0-1
 - Update to 1.6.0
 
