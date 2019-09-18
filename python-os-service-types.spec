@@ -2,6 +2,9 @@
 %global pypi_name os-service-types
 %global module_name os_service_types
 
+# Needed for train bootstrap
+%global repo_bootstrap 1
+
 %if 0%{?fedora} || 0%{?rhel} > 7
 %global with_python3 1
 %endif
@@ -18,8 +21,8 @@ and local caching of the fetched data.
 %global with_doc 1
 
 Name:           python-%{pypi_name}
-Version:        XXX
-Release:        XXX
+Version:        1.7.0
+Release:        1%{?dist}
 Summary:        Python library for consuming OpenStack sevice-types-authority data
 
 License:        ASL 2.0
@@ -149,3 +152,6 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+* Wed Sep 18 2019 RDO <dev@lists.rdoproject.org> 1.7.0-1
+- Update to 1.7.0
+
