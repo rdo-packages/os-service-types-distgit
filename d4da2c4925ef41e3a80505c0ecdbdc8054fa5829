@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3f0e54e5_f1c9f39e",
+        "filename": "python-os-service-types.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2019-10-01T10:35:48Z",
+      "side": 1,
+      "message": "this can be cleaned up",
+      "range": {
+        "startLine": 46,
+        "startChar": 0,
+        "endLine": 48,
+        "endChar": 6
+      },
+      "revId": "d4da2c4925ef41e3a80505c0ecdbdc8054fa5829",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "154b2084_cf233ccf",
+        "filename": "python-os-service-types.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2019-10-01T10:35:48Z",
+      "side": 1,
+      "message": "can be kept unversioned like it was before",
+      "range": {
+        "startLine": 67,
+        "startChar": 12,
+        "endLine": 67,
+        "endChar": 26
+      },
+      "revId": "d4da2c4925ef41e3a80505c0ecdbdc8054fa5829",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
