@@ -1,14 +1,3 @@
-# Macros for py2/py3 compatibility
-%if 0%{?fedora} || 0%{?rhel} > 7
-%global pyver %{python3_pkgversion}
-%else
-%global pyver 2
-%endif
-%global pyver_bin python%{pyver}
-%global pyver_sitelib %python%{pyver}_sitelib
-%global pyver_install %py%{pyver}_install
-%global pyver_build %py%{pyver}_build
-# End of macros for py2/py3 compatibility
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %global pypi_name os-service-types
@@ -40,32 +29,32 @@ BuildRequires:  git
 %description
 %{common_desc}
 
-%package -n     python%{pyver}-%{pypi_name}
+%package -n     python3-%{pypi_name}
 Summary:        %{summary}
-%{?python_provide:%python_provide python%{pyver}-%{pypi_name}}
+%{?python_provide:%python_provide python3-%{pypi_name}}
 
-BuildRequires:  python%{pyver}-devel
-BuildRequires:  python%{pyver}-pbr
-BuildRequires:  python%{pyver}-subunit
-BuildRequires:  python%{pyver}-testscenarios
-BuildRequires:  python%{pyver}-setuptools
-BuildRequires:  python%{pyver}-requests-mock
+BuildRequires:  python3-devel
+BuildRequires:  python3-pbr
+BuildRequires:  python3-subunit
+BuildRequires:  python3-testscenarios
+BuildRequires:  python3-setuptools
+BuildRequires:  python3-requests-mock
 
 %if 0%{?repo_bootstrap} == 0
-BuildRequires:  python%{pyver}-keystoneauth1
-BuildRequires:  python%{pyver}-oslotest
+BuildRequires:  python3-keystoneauth1
+BuildRequires:  python3-oslotest
 %endif
 
-Requires:       python%{pyver}-pbr >= 2.0.0
-%description -n python%{pyver}-%{pypi_name}
+Requires:       python3-pbr >= 2.0.0
+%description -n python3-%{pypi_name}
 %{common_desc}
 
 %if 0%{?with_doc}
 %package -n python-%{pypi_name}-doc
 Summary:        %{pypi_name} documentation
 
-BuildRequires:  python%{pyver}-openstackdocstheme
-BuildRequires:  python%{pyver}-sphinx
+BuildRequires:  python3-openstackdocstheme
+BuildRequires:  python3-sphinx
 
 %description -n python-%{pypi_name}-doc
 %{common_desc}
@@ -82,28 +71,28 @@ rm -rf {test-,}requirements.txt
 rm -rf %{pypi_name}.egg-info
 
 %build
-%{pyver_build}
+%{py3_build}
 
 %if 0%{?with_doc}
 # generate html docs
-sphinx-build-%{pyver} -b html doc/source doc/build/html
-# remove the sphinx-build-%{pyver} leftovers
+sphinx-build-3 -b html doc/source doc/build/html
+# remove the sphinx-build-3 leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %install
-%{pyver_install}
+%{py3_install}
 
 %check
 %if 0%{?repo_bootstrap} == 0
-%{pyver_bin} setup.py test
+%{__python3} setup.py test
 %endif
 
-%files -n python%{pyver}-%{pypi_name}
+%files -n python3-%{pypi_name}
 %license LICENSE
 %doc README.rst doc/source/readme.rst
-%{pyver_sitelib}/%{module_name}
-%{pyver_sitelib}/%{module_name}-%{upstream_version}-py?.?.egg-info
+%{python3_sitelib}/%{module_name}
+%{python3_sitelib}/%{module_name}-%{upstream_version}-py?.?.egg-info
 
 %if 0%{?with_doc}
 %files -n python-%{pypi_name}-doc
