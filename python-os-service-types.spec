@@ -4,6 +4,7 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %global pypi_name os-service-types
 %global module_name os_service_types
+%global repo_bootstrap 1
 
 %global common_desc \
 OsServiceTypes is a Python library for consuming OpenStack sevice-types-authority data \
@@ -17,8 +18,8 @@ and local caching of the fetched data.
 %global with_doc 1
 
 Name:           python-%{pypi_name}
-Version:        XXX
-Release:        XXX
+Version:        1.7.0
+Release:        1%{?dist}
 Summary:        Python library for consuming OpenStack sevice-types-authority data
 
 License:        ASL 2.0
@@ -118,3 +119,6 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+* Mon Mar 15 2021 RDO <dev@lists.rdoproject.org> 1.7.0-1
+- Update to 1.7.0
+
