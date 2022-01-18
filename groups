@@ -2,7 +2,7 @@
 global:Registered-Users	Registered Users
 4572c517702492251ad622a289176552a8acbbb2	rdo-superusers
 05a678d3d4a168e149d5e8a0063bbd1b1c5526da	Administrators
-6ddfecad023c6f4fa3ac8c4d2583c502ea675a73	Non-Interactive Users
+6ddfecad023c6f4fa3ac8c4d2583c502ea675a73	Service Users
 af7b88c4cb5b3f36eb4e58601b7316d69838c3b6	openstack/os-service-types-core
 02d8c2270b64a43ee8b5f4e715a28c9e6b26225b	openstack/os-service-types-ptl
 global:Anonymous-Users	Anonymous Users
