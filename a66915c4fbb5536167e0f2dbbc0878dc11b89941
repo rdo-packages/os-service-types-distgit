@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9802cc69_13f94bc0",
+        "filename": "python-os-service-types.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-06-27T14:36:39Z",
+      "side": 1,
+      "message": "This becomes useless as the automatic BRs macro will always find keystoneauth1 and oslotest as BRs.\n\nWe can manage this bootstrap in several ways:\n\n1. add keystoneauth1 and oslotest to excluded_brs list unconditionally and manage them manually as BuildRequires.\n2. Apply this conditional to the exluded_brs list so we have keystoneauth1 and oslotest in the list only when repo_bootstrap !\u003d 0.\n3. We could also add sed based on the conditionally during %prep but imo 1 and 2 are cleaner.",
+      "range": {
+        "startLine": 53,
+        "startChar": 0,
+        "endLine": 56,
+        "endChar": 6
+      },
+      "revId": "a66915c4fbb5536167e0f2dbbc0878dc11b89941",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
