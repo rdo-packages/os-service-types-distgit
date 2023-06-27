@@ -22,6 +22,30 @@
       },
       "revId": "a66915c4fbb5536167e0f2dbbc0878dc11b89941",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "455b00e3_08615d07",
+        "filename": "python-os-service-types.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-06-27T14:41:25Z",
+      "side": 1,
+      "message": "I like the option 2 personally",
+      "parentUuid": "9802cc69_13f94bc0",
+      "range": {
+        "startLine": 53,
+        "startChar": 0,
+        "endLine": 56,
+        "endChar": 6
+      },
+      "revId": "a66915c4fbb5536167e0f2dbbc0878dc11b89941",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
