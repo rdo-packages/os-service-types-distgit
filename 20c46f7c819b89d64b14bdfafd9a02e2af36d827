@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "20c46f7c819b89d64b14bdfafd9a02e2af36d827",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a537d183_4042a61c",
+        "filename": "python-os-service-types.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-06-28T10:01:13Z",
+      "side": 1,
+      "message": "typo keystoneauthe",
+      "revId": "20c46f7c819b89d64b14bdfafd9a02e2af36d827",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
