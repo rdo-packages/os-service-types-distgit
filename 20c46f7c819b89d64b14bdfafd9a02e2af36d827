@@ -33,6 +33,24 @@
       "message": "typo keystoneauthe",
       "revId": "20c46f7c819b89d64b14bdfafd9a02e2af36d827",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "47f6866d_3cdf6262",
+        "filename": "python-os-service-types.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2023-06-28T10:03:12Z",
+      "side": 1,
+      "message": "Good catch !",
+      "parentUuid": "a537d183_4042a61c",
+      "revId": "20c46f7c819b89d64b14bdfafd9a02e2af36d827",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
