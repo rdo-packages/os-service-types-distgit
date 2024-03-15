@@ -1,0 +1,8 @@
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Workflow+1: Alfredo Moralejo <amoralej@redhat.com>
+Code-Review+2: Alfredo Moralejo <amoralej@redhat.com>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Fri, 15 Mar 2024 11:46:31 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/os-service-types-distgit/+/52269
+Project: openstack/os-service-types-distgit
+Branch: refs/heads/caracal-rdo
