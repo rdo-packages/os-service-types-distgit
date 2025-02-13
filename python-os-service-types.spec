@@ -80,6 +80,7 @@ sed -i "s/^deps = -c{env:.*_CONSTRAINTS_FILE.*/deps =/" tox.ini
 sed -i /^minversion.*/d tox.ini
 sed -i /^requires.*virtualenv.*/d tox.ini
 sed -i '/sphinx-build/ s/-W//' tox.ini
+sed -i 's|python setup.py build_sphinx|sphinx-build -W -b html -d doc/build/doctrees doc/source doc/build/html|' tox.ini
 
 # Exclude some bad-known BRs
 for pkg in %{excluded_brs};do
