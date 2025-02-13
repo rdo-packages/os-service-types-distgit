@@ -1,0 +1,8 @@
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Workflow+1: Joel Capitao <jcapitao@redhat.com>
+Code-Review+2: Joel Capitao <jcapitao@redhat.com>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Thu, 13 Feb 2025 13:45:57 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/os-service-types-distgit/+/56417
+Project: openstack/os-service-types-distgit
+Branch: refs/heads/rpm-master
