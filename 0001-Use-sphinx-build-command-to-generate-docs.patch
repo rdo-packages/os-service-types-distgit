@@ -1,0 +1,25 @@
+From 6f1cca5c7236c597d64311153346a8dfd7ee26e6 Mon Sep 17 00:00:00 2001
+From: Joel Capitao <jcapitao@redhat.com>
+Date: Thu, 13 Feb 2025 14:14:35 +0100
+Subject: [PATCH] Use sphinx-build command to generate docs
+
+---
+ tox.ini | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/tox.ini b/tox.ini
+index 42af584..0c87de4 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -36,7 +36,7 @@ commands =
+ 
+ [testenv:docs]
+ basepython = python3
+-commands = python setup.py build_sphinx
++commands = sphinx-build -W -b html -d doc/build/doctrees doc/source doc/build/html
+ 
+ [testenv:releasenotes]
+ basepython = python3
+-- 
+2.47.1
+
